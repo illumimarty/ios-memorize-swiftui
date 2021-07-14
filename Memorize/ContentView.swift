@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    var emojis = ["✌","😂","😝","😁","😱","👉","🙌","🍻","🔥","🌈","☀","🎈","🌹","💄","🎀","⚽","🎾","🏁","😡","👿","🐻","🐶","🐬","🐟"]
     
     @State var emojiCount = 20
     
@@ -16,6 +15,8 @@ struct ContentView: View {
         // returns something that behaves like a view, inclusive of the inner items
 
         VStack{
+            Text("Memorize!")
+                .font(.largeTitle)
             ScrollView {
                 
                 // Lazy about accessing the "body" var in the grids
@@ -47,10 +48,6 @@ struct ContentView: View {
             }
         } label: {
             Image(systemName: "minus.circle")
-//            VStack {
-//                Text("Remove")
-//                Text("Card")
-//            }
         }
     }
     
@@ -62,10 +59,6 @@ struct ContentView: View {
             }
         } label: {
             Image(systemName: "plus.circle")
-//            VStack {
-//                Text("Add")
-//                Text("Card")
-//            }
         }
     }
 }
@@ -98,6 +91,6 @@ struct CardView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-//            .preferredColorScheme(.dark)
+            .preferredColorScheme(.dark)
     }
 }
